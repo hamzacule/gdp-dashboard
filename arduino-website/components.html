@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Components: sensors, motors, and modules with specs and usage examples." />
+  <title>Components • Arduino Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body data-page="components">
+  <header class="header">
+    <div class="container navbar">
+      <a href="/arduino-website/index.html" class="brand" aria-label="Arduino Hub home">
+        <span class="logo">A</span>
+        <span class="name">Arduino Hub</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation">☰</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="/arduino-website/index.html" data-page="home">Home</a>
+          <a href="/arduino-website/projects.html" data-page="projects">Projects</a>
+          <a href="/arduino-website/components.html" data-page="components">Components</a>
+          <a href="/arduino-website/tutorials.html" data-page="tutorials">Tutorials</a>
+          <a href="/arduino-website/contact.html" data-page="contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title reveal">Components</h1>
+      <p class="section-subtitle reveal">Key components for Arduino projects with quick specs and usage tips.</p>
+
+      <h2 class="reveal">Sensors</h2>
+      <div class="grid cols-3">
+        <article class="card reveal">
+          <div class="media"><img alt="DHT22 Sensor" src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>DHT22 (Temp/Humidity)</h3>
+            <p>Digital sensor for temperature and humidity.</p>
+            <ul class="mono">
+              <li>Voltage: 3.3–5V</li>
+              <li>Temp range: -40 to 80°C</li>
+              <li>Humidity: 0–100% RH</li>
+            </ul>
+            <div class="badges"><span class="badge">Digital</span><span class="badge">Single-wire</span></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="media"><img alt="Ultrasonic" src="https://images.unsplash.com/photo-1563502310197-c6b8f0492679?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>HC-SR04 (Ultrasonic)</h3>
+            <p>Measures distance using ultrasonic pulses.</p>
+            <ul class="mono">
+              <li>Voltage: 5V</li>
+              <li>Range: 2–400 cm</li>
+              <li>Interface: TRIG/ECHO</li>
+            </ul>
+            <div class="badges"><span class="badge">Timing</span><span class="badge">Echo</span></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="media"><img alt="IMU" src="https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>MPU6050 (IMU)</h3>
+            <p>6-axis accelerometer + gyroscope.</p>
+            <ul class="mono">
+              <li>Voltage: 3.3–5V</li>
+              <li>Interface: I²C</li>
+              <li>Address: 0x68/0x69</li>
+            </ul>
+            <div class="badges"><span class="badge">I²C</span><span class="badge">Gyro</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="spacer-lg"></div>
+
+      <h2 class="reveal">Motors & Drivers</h2>
+      <div class="grid cols-3">
+        <article class="card reveal">
+          <div class="media"><img alt="DC Motor" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>DC Motor + L298N</h3>
+            <p>Control direction and speed using PWM and H-bridge.</p>
+            <ul class="mono">
+              <li>Voltage: 5–12V motor</li>
+              <li>Driver: L298N (dual)</li>
+            </ul>
+            <div class="badges"><span class="badge">PWM</span><span class="badge">H-bridge</span></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="media"><img alt="Servo" src="https://images.unsplash.com/photo-1581093588401-16f52a72d4c7?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Servo SG90</h3>
+            <p>Position control with 50 Hz PWM signal.</p>
+            <ul class="mono">
+              <li>Voltage: 4.8–6V</li>
+              <li>Angle: ~180°</li>
+            </ul>
+            <div class="badges"><span class="badge">PWM</span><span class="badge">Servo</span></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="media"><img alt="Stepper" src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Stepper + A4988</h3>
+            <p>Precise steps with microstepping driver.</p>
+            <ul class="mono">
+              <li>Voltage: per stepper</li>
+              <li>Microsteps: up to 1/16</li>
+            </ul>
+            <div class="badges"><span class="badge">Step/Dir</span><span class="badge">Driver</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="spacer-lg"></div>
+
+      <h2 class="reveal">Modules</h2>
+      <div class="grid cols-3">
+        <article class="card reveal">
+          <div class="media"><img alt="ESP32" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>ESP32 DevKit</h3>
+            <p>Wi‑Fi/Bluetooth MCU for IoT.</p>
+            <ul class="mono">
+              <li>Voltage: 3.3V</li>
+              <li>Wi‑Fi: 2.4 GHz</li>
+              <li>BLE: Yes</li>
+            </ul>
+            <div class="badges"><span class="badge">Wi‑Fi</span><span class="badge">BLE</span></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="media"><img alt="OLED" src="https://images.unsplash.com/photo-1545235617-9465d2a55698?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>OLED 0.96" I²C</h3>
+            <p>Small display for text/graphics.</p>
+            <ul class="mono">
+              <li>Voltage: 3.3–5V</li>
+              <li>Interface: I²C</li>
+              <li>Resolution: 128×64</li>
+            </ul>
+            <div class="badges"><span class="badge">I²C</span><span class="badge">Display</span></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="media"><img alt="Relay" src="https://images.unsplash.com/photo-1603791452906-be9032b8b2eb?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Relay Module</h3>
+            <p>Switch high‑voltage loads safely.</p>
+            <ul class="mono">
+              <li>Signal: 5V</li>
+              <li>Contacts: NO/NC</li>
+            </ul>
+            <div class="badges"><span class="badge">Isolation</span><span class="badge">Safety</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="links">
+        <a href="/arduino-website/index.html">Home</a>
+        <a href="/arduino-website/projects.html">Projects</a>
+        <a href="/arduino-website/components.html">Components</a>
+        <a href="/arduino-website/tutorials.html">Tutorials</a>
+        <a href="/arduino-website/contact.html">Contact</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="muted">© <span id="year"></span> Arduino Hub.</div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
