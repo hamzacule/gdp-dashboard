@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Arduino projects with images, descriptions, and difficulty levels." />
+  <title>Projects • Arduino Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body data-page="projects">
+  <header class="header">
+    <div class="container navbar">
+      <a href="/arduino-website/index.html" class="brand" aria-label="Arduino Hub home">
+        <span class="logo">A</span>
+        <span class="name">Arduino Hub</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation">☰</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="/arduino-website/index.html" data-page="home">Home</a>
+          <a href="/arduino-website/projects.html" data-page="projects">Projects</a>
+          <a href="/arduino-website/components.html" data-page="components">Components</a>
+          <a href="/arduino-website/tutorials.html" data-page="tutorials">Tutorials</a>
+          <a href="/arduino-website/contact.html" data-page="contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title reveal">Arduino Projects</h1>
+      <p class="section-subtitle reveal">Browse project ideas with varying difficulty levels. Filter by difficulty to find the right challenge.</p>
+
+      <div class="filters" data-filter-group>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="beginner">Beginner</button>
+        <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+        <button class="filter-btn" data-filter="advanced">Advanced</button>
+      </div>
+
+      <div class="grid cols-3">
+        <!-- Project Cards -->
+        <article class="card project-card reveal" data-project-card data-difficulty="beginner">
+          <div class="media"><img alt="Blinking LED" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Blinking LED (Digital I/O)</h3>
+            <p>Use pin 13 to blink an LED at 1-second intervals with delay().</p>
+            <div class="badges">
+              <span class="badge beginner">Beginner</span>
+              <span class="badge">Arduino UNO</span>
+              <span class="badge">LED</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="beginner">
+          <div class="media"><img alt="Temperature sensor" src="https://images.unsplash.com/photo-1510557880182-3b176ee8d43e?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Temperature Logger (DHT11)</h3>
+            <p>Read temperature and humidity and print to Serial Monitor.</p>
+            <div class="badges">
+              <span class="badge beginner">Beginner</span>
+              <span class="badge">DHT11</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="intermediate">
+          <div class="media"><img alt="Ultrasonic sensor" src="https://images.unsplash.com/photo-1563502310197-c6b8f0492679?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Ultrasonic Distance Meter</h3>
+            <p>Measure distance using HC-SR04 and display on LCD.</p>
+            <div class="badges">
+              <span class="badge intermediate">Intermediate</span>
+              <span class="badge">HC-SR04</span>
+              <span class="badge">LCD 16x2</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="intermediate">
+          <div class="media"><img alt="Weather station" src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Mini Weather Station</h3>
+            <p>Combine BMP280 and DHT22 to display temp, humidity, pressure.</p>
+            <div class="badges">
+              <span class="badge intermediate">Intermediate</span>
+              <span class="badge">BMP280</span>
+              <span class="badge">DHT22</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="advanced">
+          <div class="media"><img alt="Robot car" src="https://images.unsplash.com/photo-1581093588401-16f52a72d4c7?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Line Following Robot</h3>
+            <p>PID control with IR sensors and L298N motor driver.</p>
+            <div class="badges">
+              <span class="badge advanced">Advanced</span>
+              <span class="badge">PID</span>
+              <span class="badge">L298N</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="advanced">
+          <div class="media"><img alt="Quadcopter" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>DIY Quadcopter (Arduino + IMU)</h3>
+            <p>Control brushless motors with ESCs using MPU6050 IMU.</p>
+            <div class="badges">
+              <span class="badge advanced">Advanced</span>
+              <span class="badge">ESC</span>
+              <span class="badge">MPU6050</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="beginner">
+          <div class="media"><img alt="RGB LED" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Fading RGB LED</h3>
+            <p>Use PWM to create a color cycle on a common anode RGB LED.</p>
+            <div class="badges">
+              <span class="badge beginner">Beginner</span>
+              <span class="badge">PWM</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="intermediate">
+          <div class="media"><img alt="Smart plant" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Smart Plant Watering</h3>
+            <p>Read soil moisture and drive a pump with a MOSFET.</p>
+            <div class="badges">
+              <span class="badge intermediate">Intermediate</span>
+              <span class="badge">Soil Sensor</span>
+              <span class="badge">MOSFET</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card reveal" data-project-card data-difficulty="advanced">
+          <div class="media"><img alt="Home automation" src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=80&auto=format&fit=crop" /></div>
+          <div class="content">
+            <h3>Home Automation (ESP32)</h3>
+            <p>Control lights via Wi‑Fi with a simple web server on ESP32.</p>
+            <div class="badges">
+              <span class="badge advanced">Advanced</span>
+              <span class="badge">ESP32</span>
+              <span class="badge">Wi‑Fi</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="links">
+        <a href="/arduino-website/index.html">Home</a>
+        <a href="/arduino-website/projects.html">Projects</a>
+        <a href="/arduino-website/components.html">Components</a>
+        <a href="/arduino-website/tutorials.html">Tutorials</a>
+        <a href="/arduino-website/contact.html">Contact</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="muted">© <span id="year"></span> Arduino Hub.</div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>

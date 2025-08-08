@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Modern electronics and Arduino projects, components, and tutorials." />
+  <title>Arduino Hub • Projects, Components, Tutorials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='%23fff'%3E%3Crect x='2' y='7' width='20' height='10' rx='2' ry='2' stroke-width='1.5'/%3E%3Ccircle cx='8' cy='12' r='2' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='12' r='2' stroke-width='1.5'/%3E%3C/svg%3E">
+</head>
+<body data-page="home">
+  <header class="header">
+    <div class="container navbar">
+      <a href="/arduino-website/index.html" class="brand" aria-label="Arduino Hub home">
+        <span class="logo">A</span>
+        <span class="name">Arduino Hub</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation">☰</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="/arduino-website/index.html" data-page="home">Home</a>
+          <a href="/arduino-website/projects.html" data-page="projects">Projects</a>
+          <a href="/arduino-website/components.html" data-page="components">Components</a>
+          <a href="/arduino-website/tutorials.html" data-page="tutorials">Tutorials</a>
+          <a href="/arduino-website/contact.html" data-page="contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container content">
+        <div>
+          <h1 class="reveal">Build, Learn, and Tinker with Arduino</h1>
+          <p class="reveal">Explore hands-on projects, learn electronics fundamentals, and discover the components that power your ideas. From sensors to motors, we have guides to get you building fast.</p>
+          <div class="cta reveal">
+            <a class="button button-primary" href="/arduino-website/projects.html">Explore Projects</a>
+            <a class="button button-secondary" href="/arduino-website/components.html">Browse Components</a>
+          </div>
+        </div>
+        <div class="art reveal" aria-hidden="true">
+          <div class="chip mono">UNO • Nano • Mega • ESP32</div>
+          <div class="grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">What is Arduino?</h2>
+        <p class="section-subtitle reveal">Arduino is an open-source electronics platform based on easy-to-use hardware and software. It is widely used for rapid prototyping, education, and creative projects.</p>
+        <div class="grid cols-3">
+          <article class="card reveal">
+            <div class="media"><img alt="Blinking LED" src="https://images.unsplash.com/photo-1548092372-0d1bd40894a3?w=800&q=80&auto=format&fit=crop" /></div>
+            <div class="content">
+              <h3>Blinking LED</h3>
+              <p>The classic starter project using digital outputs and timing.</p>
+              <div class="badges"><span class="badge beginner">Beginner</span><span class="badge">Digital I/O</span></div>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="media"><img alt="Distance sensor" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop" /></div>
+            <div class="content">
+              <h3>Ultrasonic Range Finder</h3>
+              <p>Measure distance using HC-SR04 and display results.</p>
+              <div class="badges"><span class="badge intermediate">Intermediate</span><span class="badge">Sensors</span></div>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="media"><img alt="Robotics" src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&q=80&auto=format&fit=crop" /></div>
+            <div class="content">
+              <h3>Line Following Robot</h3>
+              <p>A robotics build combining sensors, PWM, and control.</p>
+              <div class="badges"><span class="badge advanced">Advanced</span><span class="badge">Robotics</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="links">
+        <a href="/arduino-website/index.html">Home</a>
+        <a href="/arduino-website/projects.html">Projects</a>
+        <a href="/arduino-website/components.html">Components</a>
+        <a href="/arduino-website/tutorials.html">Tutorials</a>
+        <a href="/arduino-website/contact.html">Contact</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="muted">© <span id="year"></span> Arduino Hub. For educational use.</div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>

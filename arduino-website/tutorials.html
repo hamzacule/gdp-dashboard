@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Arduino tutorials with step-by-step guides." />
+  <title>Tutorials • Arduino Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body data-page="tutorials">
+  <header class="header">
+    <div class="container navbar">
+      <a href="/arduino-website/index.html" class="brand" aria-label="Arduino Hub home">
+        <span class="logo">A</span>
+        <span class="name">Arduino Hub</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation">☰</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="/arduino-website/index.html" data-page="home">Home</a>
+          <a href="/arduino-website/projects.html" data-page="projects">Projects</a>
+          <a href="/arduino-website/components.html" data-page="components">Components</a>
+          <a href="/arduino-website/tutorials.html" data-page="tutorials">Tutorials</a>
+          <a href="/arduino-website/contact.html" data-page="contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title reveal">Tutorials</h1>
+      <p class="section-subtitle reveal">Follow step-by-step guides to learn the basics and build real projects.</p>
+
+      <details class="details reveal">
+        <summary>Blink an LED with Arduino UNO</summary>
+        <p>Learn to control a digital output to blink an LED.</p>
+        <ol>
+          <li>Connect an LED with a 220Ω resistor to pin 13.</li>
+          <li>Open Arduino IDE and select Arduino UNO board.</li>
+          <li>Paste the code below and upload.</li>
+        </ol>
+        <pre><code>// Arduino Blink
+void setup() { pinMode(13, OUTPUT); }
+void loop() { digitalWrite(13, HIGH); delay(1000); digitalWrite(13, LOW); delay(1000); }
+</code></pre>
+      </details>
+
+      <div class="spacer"></div>
+
+      <details class="details reveal">
+        <summary>Read Temperature with DHT22</summary>
+        <p>Use a library to read temperature and humidity.</p>
+        <ol>
+          <li>Wire VCC to 5V, GND to GND, DATA to pin 2 with a 10k pull‑up.</li>
+          <li>Install the DHT sensor library (e.g., Adafruit DHT).</li>
+          <li>Upload the example sketch and open Serial Monitor.</li>
+        </ol>
+      </details>
+
+      <div class="spacer"></div>
+
+      <details class="details reveal">
+        <summary>Control a Servo (SG90)</summary>
+        <p>Rotate a servo to a specific angle.</p>
+        <ol>
+          <li>Power servo from 5V and GND, signal to pin 9.</li>
+          <li>Use the Servo library to write angles.</li>
+          <li>Test sweeping from 0° to 180°.</li>
+        </ol>
+      </details>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="links">
+        <a href="/arduino-website/index.html">Home</a>
+        <a href="/arduino-website/projects.html">Projects</a>
+        <a href="/arduino-website/components.html">Components</a>
+        <a href="/arduino-website/tutorials.html">Tutorials</a>
+        <a href="/arduino-website/contact.html">Contact</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="muted">© <span id="year"></span> Arduino Hub.</div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
